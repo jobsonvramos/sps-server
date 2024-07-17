@@ -1,0 +1,52 @@
+### Login ###
+
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+    "email": "admin@spsgroup.com.br",
+    "password": "1234"
+}
+
+### Rotas autenticadas ###
+### Registrar usuario ###
+POST http://localhost:3000/api/register
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MCwiaWF0IjoxNzIxMDUxMzI1LCJleHAiOjE3MjEwNTEzODV9.Ux2x5ItNYHjClglRFNmxZCw-oOg0HJSdG1nsWer79QE
+Content-Type: application/json
+
+{
+    "name": "usuario novo",
+    "email": "admin@admissn.com",
+    "password": "admin"
+}
+
+### update de user ###
+
+PUT http://localhost:3000/api/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MCwiaWF0IjoxNzIxMDUwNjkxLCJleHAiOjE3MjEwNTA3NTF9.Ra1wxM2UOeffnruYVJlRG4sY8LPS_rYOudIGSa_mvCw
+Content-Type: application/json
+
+{
+    "id": 0,
+    "name": "nome troecado",
+    "email": "admin@eadmin.com",
+    "password": "trocar123"
+}
+
+### Delete de user ###
+DELETE http://localhost:3000/api/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MCwiaWF0IjoxNzIxMDUwNjkxLCJleHAiOjE3MjEwNTA3NTF9.Ra1wxM2UOeffnruYVJlRG4sY8LPS_rYOudIGSa_mvCw
+Content-Type: application/json
+
+{
+    "id": 0
+}
+
+### get all users info ###
+GET http://localhost:3000/api/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MCwiaWF0IjoxNzIxMDU0OTM2LCJleHAiOjE3MjEwNTU1MzZ9.nN--2ehe_OR09pyu8M5qV9fFgsLa4SIE15aGhGqGFUE
+
+
+### get user data ###
+GET http://localhost:3000/api/users/0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MCwiaWF0IjoxNzIxMDU0NDIzLCJleHAiOjE3MjEwNTUwMjN9.A6awUsk2-cZIceN3HXmSBOG-xW4vUTBUhVgYCGV5cXE
